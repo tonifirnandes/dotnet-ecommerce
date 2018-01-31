@@ -1,0 +1,48 @@
+﻿@model Qmall.Areas.TopNavigation.Models.TopNavigationViewModel
+<nav class="top-bar">
+    <div class="container">
+        <div class="col-xs-12 col-sm-6 no-margin">
+            <ul class="contact-row">
+                <li class="phone inline">
+                    <a href=@Model.WebContact.NoTelpActionLink><i class="fa fa-phone"></i>@Model.WebContact.NoTelpTextFormatted</a>
+                </li>
+                <li class="contact inline">
+                    <a href=@Model.WebContact.EmailAction><i class="fa fa-envelope"></i> sales@sistemseiki.com</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 no-margin">
+            <ul class="right">
+                <li>@Html.ActionLink("Faq", "Index", "Home", new { area = "Faq" })</li>
+                <li>
+                    <a href="#">English</a>
+                </li>
+                <li>
+                    <a href="#">Rupiah (IDR)</a>
+                </li>
+
+                @if (@Model.UserLoginSession != null)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="fa fa-user-circle"></span>
+                            <strong>@Model.UserLoginSession.customerEmail</strong>
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Halo @Model.UserLoginSession.customerEmail</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Keranjang<i class="fa fa-shopping-basket" aria-hidden="true"></i><span> 0</span></a></li>
+                            <li>@Html.ActionLink("Log Out", "Logout", "Form", new { area = "Login" })</li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Register", "Index", "Form", new { area = "Register" })</li>
+                    <li>@Html.ActionLink("Login", "Index", "Form", new { area = "Login" })</li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

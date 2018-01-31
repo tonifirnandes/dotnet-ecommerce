@@ -1,0 +1,169 @@
+﻿@model Qmall.Areas.ProductDetail.Models.ProductDetailPresentationModel
+@{
+    ViewData["Title"] = "Detail Product - " + Model.ProductDetail.productName;
+}
+
+<div id="single-product">
+    <div class="container">
+        <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
+            <div class="product-item-holder size-big single-product-gallery small-gallery">
+                <div id="owl-single-product" style="opacity: 1; display: block;" class="owl-carousel owl-theme">
+                    <div class="owl-wrapper-outer">
+                        <div class="owl-wrapper" style="width: 2598px; left: 0px; display: block;">
+                            <div class="owl-item" style="width: 433px;">
+                                <div class="single-product-gallery-item" id="slide1">
+                                    <a data-rel="prettyphoto" href="@Model.ProductDetail.productImagesPath" width="350">
+                                        <img class="img-responsive" alt="" src="@Model.ProductDetail.productImagesPath" width="350">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="no-margin col-xs-12 col-sm-7 body-holder">
+            <div class="body">
+                <div class="title">
+                    Price :
+                    @if (Model.finalPrice != null)
+                    {
+                        <span id="span-final-price">@Model.finalPrice</span>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Index", "Form", new { area = "Login" })">Login First</a>
+                    }
+                </div>
+                @if (Model.ProductDetail.productStock == 0)
+                {
+                    <div class="availability"><label>Availability:</label><span class="available stock-empty">@Model.ProductDetail.productStock</span></div>
+                }
+                else
+                {
+                    <div class="availability"><label>Availability:</label><span class="available">@Model.ProductDetail.productStock</span></div>
+                }
+                <div class="title"><h5 class="product-name-title">Name : <span id="initial-product-name">@Model.ProductDetail.productName</span> </h5></div>
+                <div class="title"><h5 class="product-part-number">Part Number : <span id="initial-product-partNumber">@Model.ProductDetail.productPartNumber</span> </h5></div>
+                @if (Model.ProductDetail.priceList != null)
+                {
+                    <div class="prices">
+                        @if (Model.specialPrice != null)
+                        {
+                            <div class="section-special">
+                                <label class="label label-danger">Special</label>
+                                <div class="price-prev">@Model.originalPrice.priceValue</div>
+                            </div>
+                        }
+                        else if (Model.discountPrice != null)
+                        {
+                            <div class="section-special">
+                                <label class="label label-primary">Discount @Model.productsDiscount%</label>
+                                <div class="price-prev">@Model.originalPrice.priceValue</div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="price-prev"></div>
+                        }
+                    </div>
+                }
+
+                @if (Model.ProductDetail.productStock == 0)
+                {
+                    <a id="addto-cart" href="cart.html" class="le-button huge btn-stock-empty">Inquiry</a>
+                }
+                else
+                {
+                    <div class="qnt-holder">
+                        <div class="le-quantity">
+                            <form>
+                                <a class="minus" href="#reduce"></a>
+                                <input name="quantity" readonly="readonly" value="1" type="text">
+                                <a class="plus" href="#add"></a>
+                            </form>
+                        </div>
+                        <a id="addto-cart" href="cart.html" class="le-button huge">add to cart</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="single-product-tab">
+    <div class="container">
+        <div class="tab-holder">
+            <ul class="nav nav-tabs simple">
+                <li class="active"><a href="#technical-information" data-toggle="tab">Technical Information</a></li>
+                <li><a href="#catalog" data-toggle="tab">Catalog</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="technical-information">
+                    <ul class="tabled-data">
+                        <li>
+                            <label>weight</label>
+                            <div class="value">@Model.ProductDetail.productWeight</div>
+                        </li>
+                        <li>
+                            <label>stock</label>
+                            <div class="value">@Model.ProductDetail.productStock</div>
+                        </li>
+                        <li>
+                            <label>specification</label>
+                            <div class="value">@Model.ProductDetail.productSpesification</div>
+                        </li>
+                        <li>
+                            <label>delivery type</label>
+                            <div class="value">@Model.ProductDetail.productDeliveryTImeType</div>
+                        </li>
+                        <li>
+                            <label>delivery time</label>
+                            <div class="value">@Model.ProductDetail.productDeliveryTimeMin - @Model.ProductDetail.productDeliveryTimeMax days</div>
+                        </li>
+                        <li>
+                            <label>download</label>
+                            <div class="value"><a href="@Model.ProductDetail.productDownloadLink">Download Catalog Product</a></div>
+                        </li>
+                        <li>
+                            <label>description</label>
+                            <div class="value">@Model.ProductDetail.productDescription</div>
+                        </li>
+                    </ul>
+                    <div class="meta-row">
+                        <div class="inline">
+                            <label>Part Number:</label>
+                            <span>@Model.ProductDetail.productPartNumber</span>
+                        </div>
+                        <span class="seperator">/</span>
+                        <div class="inline">
+                            <label>Categories:</label>
+                            <span><a href="#">@Model.ProductDetail.productCategoryDescription</a></span>
+                        </div>
+                        <span class="seperator">/</span>
+                        <div class="inline">
+                            <label>brand:</label>
+                            <span><a href="#">@Model.ProductDetail.productBrandDescription</a></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="catalog">
+                    <div id="Iframe-Master-CC-and-Rs" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+                        <div class="responsive-wrapper responsive-wrapper-wxh-572x612" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                            <iframe src="//www.slideshare.net/slideshow/embed_code/key/78NW2yxg5UZMM3">
+                                <p style="font-size: 110%;">
+                                    <em>
+                                        <strong>ERROR: </strong>
+                                        An &#105;frame should be displayed here but your browser version does not support &#105;frames.
+                                    </em>Please update your browser to its most recent version and try again.
+                                </p>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>

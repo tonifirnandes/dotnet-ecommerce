@@ -1,0 +1,26 @@
+﻿@model Qmall.Areas.ProductList.Models.ProductListViewModel
+@{
+    ViewData["Title"] = "Product List";
+} 
+
+@Html.HiddenFor(n => n.ProductBrandId)
+@Html.HiddenFor(n => n.SearchingKey)
+
+<input class="inquiryMessageResult" value="@ViewData["inquiryMessageResult"]" type="hidden" />
+<div class="container">
+    <table id="product-list-table" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Part Number</th>
+                <th>Brand</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/webapp.js"></script>
+<script src="~/js/app/feature/product-list/product-list.js"></script>

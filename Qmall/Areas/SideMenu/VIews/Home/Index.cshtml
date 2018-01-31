@@ -1,0 +1,47 @@
+﻿@using Qmall.Areas.SideMenu.ViewModels
+@model SideMenuViewModel;
+
+<div class="side-menu animate-dropdown">
+    <div class="head"><i class="fa fa-list"></i> all brands</div>
+    <nav class="yamm megamenu-horizontal" role="navigation">
+        <ul class="nav">
+            @foreach (var brand in @Model.sideMenuList)
+            {
+                <li class="dropdown menu-item">
+                    <a class="dropdown-toggle" id="@brand.parentBrandCategory.productBrandId">@brand.parentBrandCategory.productBrandDescription</a>                   
+                    <ul class="dropdown-menu mega-menu">
+                        <li class="yamm-content">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="list-unstyled">                                        
+                                        @foreach (var category in brand.subBrandCategoryList)
+                                        {
+                                            <li class="category-list"><a class="disabled">@category.productCategoryDescription</a></li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            @*Todo : single/small helper search*@
+                            @*<div class="row input-search">
+                                <div class="coll-xs-12">
+                                    <div class="form-group">
+                                        <div class="col-xs-3 center-block">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       placeholder="Part Number" id="inputGroup" />
+                                                <span class="input-group-addon">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>*@
+                        </li>
+                    </ul>
+                </li>
+            }
+
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,567 @@
+﻿@media screen and (min-width: 1480px) {
+    .container {
+        width: 1300px;
+    }
+
+    #footer .link-list-row .link-widget {
+        display: inline-block;
+        vertical-align: top;
+        width: 215px;
+        margin: 0 0 0 40px;
+    }
+}
+
+.dropdown-menu > li > a > i {
+    padding-left: 50px;
+}
+
+a.header-menu-dropdown {
+    cursor: pointer;
+}
+
+#myCarousel {
+    margin-left: -10px;
+}
+
+.carousel-control {
+    width: 5%;
+    /*margin: auto auto auto -30px;*/
+}
+
+.carousel-inner > .item > img {
+    width: 72%;
+    height: 100px;
+}
+
+.indicators-left-advertisment {
+    margin: 70% 80% 0 auto;
+}
+
+.indicators-right-advertisement {
+    margin: 70% auto 0 120%;
+}
+
+.indicator-left-products {
+    margin: 300% 80% 0 auto;
+}
+
+.indicator-right-products {
+    margin: 300% auto 0 120%;
+}
+
+/* css for auto complete */
+.autocomplete-suggestions {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: default;
+    overflow: auto;
+    opacity: 0.8;
+    position: inherit;
+}
+
+.autocomplete-suggestion {
+    padding: 3px 3px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-selected {
+    background: #0e80f2;
+    opacity: 1.0
+}
+
+.autocomplete-suggestions strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.widgets-row {
+    margin-top: -20px;
+}
+
+/* css hover menu */
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* css fixed menu */
+.fix-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+/* css notifications */
+.alert-minimalist {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    border-radius: 3px;
+    color: rgb(149, 149, 149);
+    padding: 10px;
+}
+
+    .alert-minimalist > [data-notify="icon"] {
+        height: 50px;
+        margin-right: 12px;
+    }
+
+    .alert-minimalist > [data-notify="title"] {
+        color: rgb(51, 51, 51);
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .alert-minimalist > [data-notify="message"] {
+        font-size: 80%;
+        color: azure;
+    }
+
+/* css jquery-ui autocomplete */
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;
+    _width: 160px;
+    padding: 10px 10px;
+    margin: 2px 0 0 0;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-autocomplete {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.autocomplete-loading {
+    background: url('/images/autocomplete-loading.gif') no-repeat right center;
+    width: 3px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    margin-top: 120px;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0e80f2;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+/* css sidemenu */
+.menu-item {
+    cursor: pointer;
+}
+
+/* css list product slider */
+.item-product {
+    width: 16.666666666666664%;
+    display: inline-block;
+}
+
+.carousel-control.left {
+    background-image: none;
+    background-repeat: repeat-x;
+}
+
+.carousel-control.right {
+    background-image: none;
+    background-repeat: repeat-x;
+}
+/* css product list */
+.grid-list-products {
+    margin: -20px 0 59px 0 !important;
+}
+
+.sorting-title {
+    padding: 5px 2px 7px 5px;
+    color: #3d3d3d;
+    /*width: 100%;*/
+    font-size: 13px;
+    width: auto;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#section-title {
+    text-align: right;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+#search-result-title {
+    color: #3d3d3d;
+}
+
+#count-product-list {
+    color: #3d3d3d;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 8px;
+}
+
+.part-number {
+    font-size: 20px;
+}
+
+.stock-empty {
+    color: red !important;
+}
+
+.btn-stock-empty {
+    background-color: #f46407 !important;
+}
+
+.override-filter-productList {
+    display: inline-block;
+}
+/* css product filter menu */
+.brand-option {
+    margin-right: 10px;
+}
+/* css product list result */
+.product-list-view {
+    margin-top: 80px;
+}
+/* css product detail */
+#single-product {
+    margin-top: 20px;
+}
+
+.product-name-title {
+    margin: -8px 0 5px 0;
+}
+
+.product-part-number {
+    margin: 0 0 5px 0;
+}
+
+#initial-product-name {
+    color: #000;
+    font-size: 18px;
+}
+
+#initial-product-partNumber {
+    color: #0e80f2;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#initial-product-brand {
+    color: #000;
+    font-size: 18px;
+}
+
+#span-final-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* CSS for responsive iframe */
+/* ========================= */
+
+/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
+#Iframe-Master-CC-and-Rs {
+    max-width: 800px;
+    max-height: 100%;
+    overflow: hidden;
+}
+/* inner wrapper: make responsive */
+.responsive-wrapper {
+    position: relative;
+    height: 0; /* gets height from padding-bottom */
+    /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
+    -webkit-overflow-scrolling: touch; overflow: auto; */
+}
+
+    .responsive-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+/* padding-bottom = h/w as % -- sets aspect ratio */
+/* YouTube video aspect ratio */
+.responsive-wrapper-wxh-572x612 {
+    padding-bottom: 107%;
+}
+/* general styles */
+/* ============== */
+.set-border {
+    border: 5px inset #4f4f4f;
+}
+
+.set-box-shadow {
+    -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+    -moz-box-shadow: 4px 4px 14px #4f4f4f;
+    box-shadow: 4px 4px 14px #4f4f4f;
+}
+
+.set-padding {
+    padding: 40px;
+}
+
+.center-block-horiz {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.btn-stock-empty {
+    cursor: pointer;
+}
+
+/* css for inquiry */
+.label-mandatory {
+    color: red;
+}
+
+.product-best-seller {
+    margin-bottom: 30px;
+}
+
+/* css all loading */
+.loadingMsgErr {
+    font-size: 12px;
+    margin: 3px auto;
+    text-align: center;
+}
+
+#topNavigation-loading {
+    width: 30px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#mainNavigation-loading {
+    width: 30px;
+    margin: 15px auto;
+    display: flex;
+}
+
+#newsletterNavigation-loading {
+    width: 30px;
+    margin: 60px auto;
+    display: flex;
+}
+
+#sideMenu-loading {
+    width: 30px;
+    margin: 30px auto 60px auto;
+    display: flex;
+}
+
+#topViewProducts-loading {
+    width: 30px;
+    margin: 30px auto 60px auto;
+    display: flex;
+}
+
+#bestSeller-loading {
+    width: 30px;
+    margin: 30px auto 60px auto;
+    display: flex;
+}
+
+#footerTopViewProducts-loading {
+    width: 30px;
+    margin: 30px auto 60px auto;
+    display: flex;
+}
+
+#footerBestSeller-loading {
+    width: 30px;
+    margin: 30px auto 60px auto;
+    display: flex;
+}
+
+.dataTables_length {
+    float: right !important;
+}
+
+.sorting_1 {
+    text-align: center;
+}
+
+/* css panel account */
+.panel-account {
+    margin-bottom: 6px;
+}
+.panel-account-sign {
+    background-color: #d4d4d6;
+}
+
+.account-panel {
+    text-align: center;
+}
+
+.account-panel ul li {
+    display: inline;
+    margin: auto 5px;
+    color: #0e80f2 !important;
+}
+
+.account-panel ul li:hover {
+    text-decoration: underline;
+}
+
+.account-panel ul li a {
+    font-size: 16px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.panel-heading-order {
+    background-color: #0e80f2 !important;
+    text-align: center;
+}
+
+.panel-heading-order span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.order-panel {
+    text-align: center;
+}
+
+.order-panel ul {
+    margin-top: -9px;
+}
+
+.order-panel ul li {
+    display: inline;
+}
+
+.order-panel ul li button {
+    height: 50px;
+    width: 49%;
+    background-color: #aaaaff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.order-panel ul li button:hover {
+    height: 50px;
+    width: 49%;
+    background-color: #aaaaff;
+    font-weight: bold;
+}
+
+.order-panel ul li button i {
+    color: #0e80f2;
+    margin: auto 5px;
+}
+
+.history-panel {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.history-panel ul {
+    margin-top: -5px;
+}
+
+.history-panel ul li {
+    display: inline;
+}
+
+.history-panel ul li button {
+    height: 50px;
+    width: 49%;
+    background-color: #9c9c9e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.panel-track-order {
+    margin: -15px 14px 14px 14px;
+}
+
+.panel-heading-track-order {
+    background-color: #ffb672 !important;
+    text-align: center;
+}
+
+.panel-heading-track-order span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.le-button:hover {
+    background-color: #1c4dbe !important;
+}
+
+/* css for product list brand */
+.home-brand-title .top-brands-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home-brand-title .top-brands-view:hover {
+    text-decoration: underline;
+}
+
+.home-brand-title span i {
+    color: #0e80f2;
+}
+
+.home-brand-list ul li {
+    display: inline;
+}
+
+.home-brand-list {
+    margin-top: 10px;
+}
+
+.home-brand-list ul li {
+    margin: 10px;
+}
+
+.home-brand-list ul li img {
+    width: 150px;
+    height: 45px;
+}
+
+

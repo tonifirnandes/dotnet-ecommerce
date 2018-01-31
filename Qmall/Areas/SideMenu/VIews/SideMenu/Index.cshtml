@@ -1,0 +1,56 @@
+﻿@model Qmall.Areas.SideMenu.Models.SideMenuViewModel
+
+<div class="side-menu animate-dropdown">
+    <div class="head"><i class="fa fa-list"></i> all brands</div>
+    <nav class="yamm megamenu-horizontal" role="navigation">
+        <ul class="nav">
+            @foreach (var brand in Model.sideMenuList)
+    {
+        <li class="dropdown menu-item">
+            <a class="dropdown-toggle" id="@brand.productBrandId">@brand.productBrandDescription</a>
+            <ul class="dropdown-menu mega-menu">
+                <li class="yamm-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                @foreach (var categories in brand.categoriesMenu)
+                        {
+                            <li class="category-list"><a class="disabled">@categories.productCategoryDescription</a></li>
+                }
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+}
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">TSUBAKI</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">PANASONIC</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">CELIC</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">APEX DYNAMICS</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">SANKYO</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">NBK</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">KEYENCE</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">THK</a>
+            </li>
+            <li class="dropdown menu-item">
+                <a class="dropdown-toggle" id="">OTHERS</a>
+            </li>
+        </ul>
+    </nav>
+</div>

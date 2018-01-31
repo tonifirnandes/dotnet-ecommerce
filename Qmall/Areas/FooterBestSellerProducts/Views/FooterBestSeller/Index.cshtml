@@ -1,0 +1,9 @@
+﻿@model Qmall.Models.ProductsTopViewModel
+
+<ul>
+    @foreach (var product in Model.data)
+    {
+        <li><a href="category-grid.html">@product.productName</a></li>
+    }
+
+</ul>

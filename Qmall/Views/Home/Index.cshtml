@@ -1,0 +1,31 @@
+﻿﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div id="top-banner-and-menu">
+    <div class="container">
+        <div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
+            @{ await Html.RenderPartialAsync("_Partial/_SideMenu"); }
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-6 homebanner-holder">
+            @{ await Html.RenderPartialAsync("_Partial/_HomeBanner"); }
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            @{ await Html.RenderPartialAsync("_Partial/_PanelAccount"); }
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            @{ await Html.RenderPartialAsync("_Partial/_TopBrand"); }
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            @{
+                await Html.RenderPartialAsync("_Partial/_BottomBanner");
+            }
+        </div>
+    </div>
+</div>
+
+@{
+    // await Html.RenderPartialAsync("_Partial/_ProductsTopView");
+    // await Html.RenderPartialAsync("_Partial/_ProductsBestSeller");
+}
+

@@ -1,0 +1,72 @@
+﻿@model Qmall.Models.ProductsTopViewModel
+
+@{ 
+    var countSlider = 0;
+    string active = "";
+}
+
+<div id="products-tab" class="wow fadeInUp">
+    <div class="container">
+        <div class="tab-holder">
+            <h1>Top View</h1>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="featured">
+                    <div class="product-grid-holder">
+                        <div id="slideProductTopView" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                @for (int i = 0; i <= Model.data.Count() / 6; i++)
+                                {
+                                    if (countSlider == 0)
+                                    {
+                                        active = "active";
+                                    }
+                                    else
+                                    {
+                                        active = "";
+                                    }
+
+                                    <div class="item @active">
+                                        @foreach (var topView in Model.data.Skip(i * 6).Take(6))
+                                        {
+                                            <div class="col-sm-3 col-md-2  no-margin product-item-holder hover">
+                                                <div class="product-item">
+                                                    <div class="ribbon red"><span>sale</span></div>
+                                                    <div class="image">
+                                                        <img alt="" src="~/images/products/st-robotics-r17-5-axis-articulated-robot-arm_2.jpg" />
+                                                    </div>
+                                                    <div class="body">
+                                                        <div class="title">
+                                                            <a href="@Url.Action("Index", "Home", new { area = "ProductDetail", productId = topView.productId })">@topView.productName</a>
+                                                        </div>
+                                                        <div class="brand">@topView.productPartNumber</div>
+                                                        <div class="price-prev"></div>
+                                                        <div class="price-current pull-right"></div>
+                                                    </div>
+                                                    <div class="hover-area">
+                                                        <div class="add-cart-button">
+                                                            <a href="@Url.Action("Index", "Home", new { area = "ProductDetail", productId = topView.productId })" class="le-button">Go to detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                    countSlider++;
+                                }
+                            </div>
+                            <a class="left carousel-control" href="#slideProductTopView" data-slide="prev">
+                                <span class="fa fa-chevron-circle-left indicator-left-products"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#slideProductTopView" data-slide="next">
+                                <span class="fa fa-chevron-circle-right indicator-right-products"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

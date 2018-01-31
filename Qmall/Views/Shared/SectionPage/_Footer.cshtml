@@ -1,0 +1,61 @@
+<footer id="footer" class="color-bg">
+    @{ await Html.RenderPartialAsync("SectionPage/_Newsletter"); }
+    <div class="sub-form-row">
+        <d class="container">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
+                <input placeholder="Subscribe to our newsletter" id="subscribe-email">
+                <button class="le-button" id="subscribe-btn">Subscribe</button>
+            </div>
+        </d>
+    </div>
+    <div class="link-list-row">
+        <div class="container no-padding">
+            <div class="col-xs-12 col-md-4 ">
+                <div class="contact-info">
+                    @{ await Html.RenderPartialAsync("SectionPage/_FooterContactInfo"); }
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8 no-margin">
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>Top View</h3>
+                        <!-- @{ await Html.RenderPartialAsync("SectionPage/_FooterTopViewProducts"); } -->
+                    </div>
+                </div>
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>Top Sell</h3>
+                        <!-- @{ await Html.RenderPartialAsync("SectionPage/_FooterBestSellerProducts"); } -->
+                    </div>
+                </div>
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>Top Brand</h3>
+                        <ul>
+                            <li><a href="#">Mitsubishi Electric</a></li>
+                            <li><a href="#">Omron</a></li>
+                            <li><a href="#">Oriental Motor</a></li>
+                            <li><a href="#">Yamaha Robotics</a></li>
+                            <li><a href="#">SMC</a></li>
+                            <li><a href="#">Sunx</a></li>
+                            <li><a href="#">Keyence</a></li>
+                            <li><a href="#">More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-margin">
+                <div class="copyright">
+                    &copy; <a href="index.html">PT. Sistem Seiki Aditama</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 no-margin">
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="~/js/app/feature/newsletter/subscribe-newsletter.js"></script>

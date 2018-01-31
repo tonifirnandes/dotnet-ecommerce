@@ -1,0 +1,38 @@
+@model Qmall.Areas.Faq.Models.FaqModel
+@{
+    ViewData["Title"] = "FAQ";
+    int count = 1;
+}
+<main id="faq" class="inner-bottom-md">
+    <div class="container">
+        <section class="section">
+            <div class="page-header">
+                <h2 class="page-title">Frequently Asked Questions</h2>
+                <p class="page-subtitle">Last Updated on @DateTime.UtcNow</p>
+            </div>
+            <div id="questions" class="panel-group panel-group-faq">
+                @foreach (var faq in Model.data)
+                {
+                    <div class="panel panel-faq">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#questions" href="#question-@count">
+                                    @faq.faqQuestion
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="question-@count" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <h5><span class="label label-primary">Answer</span></h5>
+                                @faq.faqAnswer
+                            </div>
+                        </div>
+                    </div>
+
+                    count++;
+                }
+            </div>
+        </section>
+    </div>
+
+</main>

@@ -1,0 +1,10 @@
+E:\ONLINE STORE\Qmall\Qmall\bin\Release\netcoreapp2.0\Qmall.deps.json
+E:\ONLINE STORE\Qmall\Qmall\bin\Release\netcoreapp2.0\Qmall.runtimeconfig.json
+E:\ONLINE STORE\Qmall\Qmall\bin\Release\netcoreapp2.0\Qmall.runtimeconfig.dev.json
+E:\ONLINE STORE\Qmall\Qmall\bin\Release\netcoreapp2.0\Qmall.dll
+E:\ONLINE STORE\Qmall\Qmall\bin\Release\netcoreapp2.0\Qmall.pdb
+E:\ONLINE STORE\Qmall\Qmall\obj\Release\netcoreapp2.0\Qmall.csproj.CoreCompileInputs.cache
+E:\ONLINE STORE\Qmall\Qmall\obj\Release\netcoreapp2.0\Qmall.AssemblyInfoInputs.cache
+E:\ONLINE STORE\Qmall\Qmall\obj\Release\netcoreapp2.0\Qmall.AssemblyInfo.cs
+E:\ONLINE STORE\Qmall\Qmall\obj\Release\netcoreapp2.0\Qmall.dll
+E:\ONLINE STORE\Qmall\Qmall\obj\Release\netcoreapp2.0\Qmall.pdb

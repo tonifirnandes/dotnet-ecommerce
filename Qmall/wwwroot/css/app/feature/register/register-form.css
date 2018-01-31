@@ -1,0 +1,43 @@
+﻿body {
+    text-align: center;
+}
+.margin-card, .register-title {
+    margin: auto;
+}
+.label-mandatory {
+    color: red;
+}
+.term-of-use {
+    font-size: 12px;
+}
+.msg-err {
+    color: #d50000;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 3px;
+    display: block;
+}
+.register-success-info {
+    margin-top: 60px;
+}
+.limit-code-info {
+    text-align: center;
+    color: red;
+    margin: auto;
+}
+.btn-login {
+    width: 100%;
+    margin: auto;
+}
+.links-register {
+    text-align: left;
+}
+.links-register > a {
+    color: #0e80f2 !important;
+}
+.links-forgot-password {
+    text-align: right;
+}
+.links-forgot-password > a {
+    color: #0e80f2 !important;
+}

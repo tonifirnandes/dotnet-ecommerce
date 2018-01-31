@@ -1,0 +1,1 @@
+This is private repository for online store and service web

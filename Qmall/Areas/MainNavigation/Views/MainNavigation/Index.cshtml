@@ -1,0 +1,54 @@
+﻿@model Qmall.Areas.MainNavigation.Models.MainNavigationViewModel
+
+<header>
+    <div class="container no-padding">
+        <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+            <div class="logo">
+                <img id="app-logo" src="~/images/logo/qmall-logo.png" />
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder no-margin">
+            <div class="search-area">
+                <form>
+                    <div class="control-group">
+                        <input class="search-input" placeholder="Search for item" />
+                        <ul class="categories-filter animate-dropdown">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle search-brand-list-selected" data-toggle="dropdown" href="category-grid.html">ALL BRANDS</a>
+                                <ul class="dropdown-menu dropdown-brand-menu" role="menu">
+                                    @foreach (var brand in Model.BrandList)
+                                    {
+                                        <li class="search-brand-list-option" id="@brand.productBrandId" role="presentation"><a class="header-menu-dropdown" role="menuitem" tabindex="-1">@brand.productBrandDescription</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class="search-button"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-2 top-cart-row no-margin">
+            <div class="top-cart-row-container">
+                <div class="top-cart-holder dropdown animate-dropdown">
+                    <div class="basket">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <div class="basket-item-count">
+                                <span class="count">3</span>
+                                <img src="~/images/icon-cart.png" alt="" />
+                            </div>
+                            <div class="total-price-basket">
+                                <span class="lbl">your cart:</span>
+                                <span class="total-price">
+                                    <span class="sign">$</span><span class="value">3219,00</span>
+                                </span>
+                            </div>
+                        </a>
+                    </div><!-- /.basket -->
+                </div><!-- /.top-cart-holder -->
+            </div><!-- /.top-cart-row-container -->
+        </div><!-- /.top-cart-row -->
+    </div><!-- /.container -->
+</header>
+<script src="~/js/app/base/scroll-page.js"></script>
+<script src="~/js/app/feature/search-products/search-products.js"></script>

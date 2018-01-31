@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+   <OutputType>Exe</OutputType>
+   <TargetFramework>netcoreapp2.0</TargetFramework>
+   <PreserveCompilationContext>true</PreserveCompilationContext>
+   <RuntimeIdentifiers>win7-x64;win7-x86;ubuntu.16.04-x64;</RuntimeIdentifiers>
+   <SuppressDockerTargets>True</SuppressDockerTargets>
+ </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Areas\ForgotPassword\Data\**" />
+    <Compile Remove="Views\Shared\SectionAreas\**" />
+    <Content Remove="Areas\ForgotPassword\Data\**" />
+    <Content Remove="Views\Shared\SectionAreas\**" />
+    <EmbeddedResource Remove="Areas\ForgotPassword\Data\**" />
+    <EmbeddedResource Remove="Views\Shared\SectionAreas\**" />
+    <None Remove="Areas\ForgotPassword\Data\**" />
+    <None Remove="Views\Shared\SectionAreas\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Areas\ProductList\Views\Home\_ProductList.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Areas\ProductList\Views\Home\_ProductList.cshtml" />
+    <Content Remove="wwwroot\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="2.6.362" />
+    <PackageReference Include="jQuery" Version="3.2.1" />
+    <PackageReference Include="jQuery.UI.Combined" Version="1.12.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\BestSellerProducts\Data\" />
+    <Folder Include="Areas\BestSellerProducts\Models\" />
+    <Folder Include="Areas\FooterBestSellerProducts\Data\" />
+    <Folder Include="Areas\FooterBestSellerProducts\Models\" />
+    <Folder Include="Areas\FooterTopViewProducts\Data\" />
+    <Folder Include="Areas\FooterTopViewProducts\Models\" />
+    <Folder Include="Areas\MainNavigation\Data\" />
+    <Folder Include="Areas\Newsletter\Data\" />
+    <Folder Include="Areas\SearchProducts\Data\" />
+    <Folder Include="Areas\SearchProducts\Views\" />
+    <Folder Include="Areas\SideMenu\Data\" />
+    <Folder Include="Areas\TopNavigation\Data\" />
+    <Folder Include="Areas\TopViewProducts\Data\" />
+    <Folder Include="Areas\TopViewProducts\Models\" />
+    <Folder Include="wwwroot\css\app\base\" />
+    <Folder Include="wwwroot\css\app\shared\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\app\shared\" />
+    <Folder Include="wwwroot\lib\twbsPagination\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+﻿@model Qmall.Areas.Inquiry.Models.InquiryFormStub
+
+<form asp-area="Inquiry" asp-controller="Inquiry" asp-action="InquiryForm" id="inquiry-form">
+    <input asp-for="productId" type="hidden" />
+    <input asp-for="productPartNumber" type="hidden" />
+    <div class="form-group">
+        <label asp-for="customerEmail">Email <span class="label-mandatory"> *</span></label>
+        <input asp-for="customerEmail" class="form-control" />
+        <span asp-validation-for="customerEmail" class="text-danger" id="customerEmailMsg"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customerTelephone">Phone Number <span class="label-mandatory"> *</span></label>
+        <input asp-for="customerTelephone" class="form-control" />
+        <span asp-validation-for="customerTelephone" class="text-danger" id="customerTelephoneMsg"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="customerInquiryNotes">Notes <span class="label-mandatory"> *</span></label>
+        <textarea asp-for="customerInquiryNotes" rows="5" cols="40" class="form-control"></textarea>
+        <span asp-validation-for="customerInquiryNotes" class="text-danger" id="customerInquiryNotesMsg"></span>
+    </div>
+</form>

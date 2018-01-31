@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="sistemseiki, elektronik, eCommerce">
+    <meta name="robots" content="all">
+
+    <title>Qmall - @ViewData["Title"]</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Template Core CSS -->
+    <link rel="stylesheet" href="~/css/app/lib/media-center/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/app/lib/media-center/main.css">
+
+    <!-- Libraries CSS Files -->   
+    <link rel="stylesheet" href="~/css/app/lib/media-center/green.css">
+    <link rel="stylesheet" href="~/css/app/lib/media-center/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/app/lib/media-center/owl.transitions.css">
+    <link rel="stylesheet" href="~/css/app/lib/media-center/animate.min.css">
+    <link href="~/lib/jquery-pagination/dist/pagination.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/lib/bootstrap-select/dist/css/bootstrap-select.min.css" />
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Icons/Glyphs -->
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css">
+    <!-- Datatables Styling-->
+    <link href="~/lib/datatables/css/dataTables.bootstrap.min.js" rel="stylesheet"/>
+
+    <!-- Customizable/main app CSS -->
+    <link rel="stylesheet" href="~/css/app/app.min.css">
+      
+    <!-- global js plugin jquery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- TOP NAVIGATION -->
+        @{ await Html.RenderPartialAsync("SectionPage/_TopNavigation"); }
+        <!-- HEADER -->
+        @{ await Html.RenderPartialAsync("SectionPage/_MainNavigation"); }
+        <!-- MAIN LAYOUT -->
+        @RenderBody()
+
+        @{ await Html.RenderPartialAsync("SectionPage/_Footer"); }
+    </div><!-- /.wrapper -->
+
+    <!-- Libraries js Files -->  
+    <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap-select/js/bootstrap-select.js"></script>
+    <script src="~/lib/jquery-pagination/src/pagination.js"></script>
+    <script src="~/lib/twbsPagination/jquery.twbsPagination.min.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.1/js/responsive.bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="~/js/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- Libraries template js Files -->  
+    <script src="~/js/app/lib/media-center/bootstrap.min.js"></script>
+    <script src="~/js/app/lib/media-center/gmap3.min.js"></script>
+    <script src="~/js/app/lib/media-center/bootstrap-hover-dropdown.min.js"></script>
+    <script src="~/js/app/lib/media-center/owl.carousel.min.js"></script>
+    <script src="~/js/app/lib/media-center/echo.min.js"></script>
+    <script src="~/js/app/lib/media-center/jquery.easing-1.3.min.js"></script>
+    <script src="~/js/app/lib/media-center/bootstrap-slider.min.js"></script>
+    <script src="~/js/app/lib/media-center/jquery.raty.min.js"></script>
+    <script src="~/js/app/lib/media-center/jquery.prettyPhoto.min.js"></script>
+    <script src="~/js/app/lib/media-center/jquery.customSelect.min.js"></script>
+    <script src="~/js/app/lib/media-center/wow.min.js"></script>
+    <script src="~/js/app/lib/media-center/scripts.js"></script>
+
+    <!-- main js app Files -->   
+    <script src="~/js/app/base/rest-api-ajax.js"></script>
+    <script src="~/js/app/base/webapp.min.js"></script>    
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
